@@ -4,8 +4,8 @@ import { eq } from "drizzle-orm";
 import { notFound } from "next/navigation";
 
 export const revalidate = 60;
-
-export default async function ArticlePage({ params }: { params: { id: string } }) {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export default async function ArticlePage({ params }: any) {
   const id = Number(params.id);
   if (isNaN(id)) return notFound();
 

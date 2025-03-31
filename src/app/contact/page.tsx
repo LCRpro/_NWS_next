@@ -20,14 +20,15 @@ export default function ContactPage() {
             resolve("Message envoyé !");
             form.reset();
           } else {
-            reject(result.errors.join("\n"));
+            reject(result.errors?.join("\n") || "Erreur inconnue");
           }
         });
       }),
       {
         loading: "Envoi du message...",
-        success: (msg) => msg,
-        error: (err) => err,
+        success: (msg) => String(msg),
+        error: (err) => String(err),
+        
       }
     );
   };
