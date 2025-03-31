@@ -6,6 +6,6 @@ export async function POST() {
   cookieStore.delete("auth_token");   
 
   return NextResponse.redirect(
-    new URL("/", process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000")
+    new URL("/", process.env.NEXT_PUBLIC_BASE_URL || "https://nextnws-weld.vercel.app/")
   );
 }
