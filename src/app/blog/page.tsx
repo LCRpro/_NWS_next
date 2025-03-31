@@ -12,8 +12,7 @@ export default async function BlogPage() {
         {allArticles.map((article) => (
           <li key={article.id} className="border p-4 rounded">
             <Link href={`/blog/${article.id}`} className="text-xl hover:underline">
-              {article.title} <br></br>
-              {article.content}
+              Titre : {article.title}
             </Link>
           </li>
         ))}

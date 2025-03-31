@@ -5,11 +5,7 @@ import { notFound } from "next/navigation";
 
 export const revalidate = 60;
 
-type Props = {
-  params: { id: string };
-};
-
-export default async function ArticlePage({ params }: Props) {
+export default async function ArticlePage({ params }: { params: { id: string } }) {
   const id = Number(params.id);
   if (isNaN(id)) return notFound();
 
