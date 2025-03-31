@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useTransition } from "react";
+import { useTransition } from "react";
 import { sendContactForm } from "./actions";
 import toast, { Toaster } from "react-hot-toast";
 
